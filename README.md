@@ -1,6 +1,6 @@
-# Project Title
+# Facebook-SDK-query-Mobile-App
 
-One Paragraph of project description goes here
+Implement Facebook node query with AngularJS and Bootstrap for mobile website and Android app, PHP for back-end on Amazon AWS
 
 ## Getting Started
 
@@ -8,33 +8,47 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+
+
+Android part:
+You need to install Android studio and import this project in it.
+You can download Android studio here:
+https://developer.android.com/studio/index.html
+
+
+PHP part:
+You need to get one Facebook Application and short access token:
 
 ```
 Give examples
 ```
 
 ### Installing
+Android part:
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
+You need to change the link direct to index.php:
 ```
-Give the example
+Give an example
 ```
 
-And repeat
+PHP part:
+you need to change the code in index.php
 
 ```
-until finished
+require_once __DIR__ . '/php-graph-sdk-5.0.0/src/Facebook/autoload.php';
+	$access_token = "your_access_token";
+	$fb = new Facebook\Facebook([
+        'app_id' => 'your_app_id',
+        'app_secret' => 'your_app_secret',
+        'default_graph_version' => 'v2.9',
+      ]);
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+and put all th folder in the apache server
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+You can dirtect run it on Android phone or on your Computer
 
 ### Break down into end to end tests
 
@@ -44,18 +58,7 @@ Explain what these tests test and why
 Give an example
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
+<!-- 
 ## Built With
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
@@ -65,23 +68,10 @@ Add additional notes about how to deploy this on a live system
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
+ -->
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Wei-Nung Chao** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
